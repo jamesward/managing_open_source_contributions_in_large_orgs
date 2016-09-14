@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Managing Open Source Contributions in Large Organizations</title>
+
+    <meta name="author" content="James Ward">
+    <meta name="description" content="In contrast to just a few years ago, most large enterprises are now contributors to and maintainers of open source projects. For many, there are aspects to the contributions that slip through the cracks, causing headaches for legal teams and unnecessary risk for the organization. Things like managing code licenses, contributor license agreements, and patent-related issues are often not addressed. This session describes how your organization can tackle these issues and covers some of the tooling Salesforce has built to help ensure legal compliance with incoming and outgoing contributions.">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <style>
+      .reveal section img {
+        border: 1px solid #222;
+      }
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h2>Managing Open Source Contributions in Large Organizations</h2>
+          <p>
+            <small><a href="http://jamesward.com">James Ward</a> | <a href="http://twitter.com/_JamesWard">@_JamesWard</a></small>
+            <br/>
+            <small><em>Platform Evangelist @ Salesforce.com</em></small>
+          </p>
+        </section>
+        <section>
+          <div>
+            <img src="assets/jamesward-github.png">
+          </div>
+          <div>
+            <a href="http://stackoverflow.com/users/77409/james-ward"><img src="http://stackoverflow.com/users/flair/77409.png" width="208" height="58" alt="profile for James Ward at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for James Ward at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+          </div>
+          <p>
+            Past: Adobe, Heroku, Typesafe (now Lightbend)
+          </p>
+          <p>
+            Now: Salesforce, WebJars, &amp; a 10-month old
+          </p>
+        </section>
+        <section>
+          <h2>Why do Open Source?</h2>
+          <ul>
+            <li class="fragment">Build trust with customers / partners</li>
+            <li class="fragment">Create an ecosystem around a library / tool / framework</li>
+            <li class="fragment">Unmerged forks are a maintenance nightmare</li>
+            <li class="fragment">Show leadership in the software industry</li>
+            <li class="fragment">Recruiting</li>
+          </ul>
+        </section>
+        <section>
+          <h3>But it is hard...</h3>
+        </section>
+        <section>
+          <h2>Security Concerns</h2>
+          <h2 class="fragment">Quality Concerns</h2>
+          <h2 class="fragment">Legal Concerns</h2>
+          <ul>
+            <li class="fragment">Patent Issues</li>
+            <li class="fragment">Ownership Issues</li>
+            <li class="fragment">License Issues</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Solutions</h2>
+          <ul>
+            <li>Do Nothing</li>
+            <li>Use a Foundation</li>
+            <li>Build Tools</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Do Nothing</h2>
+          <ul>
+            <li class="fragment">Pro: It is easy</li>
+            <li class="fragment">Con: Does not make the legal team happy</li>
+            <li class="fragment">Pro: Do-it-yourself governance</li>
+            <li class="fragment">Con: Do-it-yourself governance</li>
+            <li class="fragment">Pro: Do-it-yourself infrastructure</li>
+            <li class="fragment">Con: Do-it-yourself infrastructure</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Use a Foundation</h2>
+          <ul>
+            <li class="fragment">Pro: Infrastructure out-of-the-box</li>
+            <li class="fragment">Con: Heavy governance</li>
+            <li class="fragment">Pro: Greater trust with customers / partners</li>
+            <li class="fragment">Con: Contribution process can be a legal battle</li>
+            <li class="fragment">Pro: Signal of project maturity</li>
+            <li class="fragment">Con: Can be a good way to lose great engineers</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Build Tools</h2>
+          <ul>
+            <li class="fragment">Pro: Tackle biggest risks</li>
+            <li class="fragment">Con: Not much off-the-shelf</li>
+            <li class="fragment">Pro: GitHub provides a great foundation</li>
+            <li class="fragment">Con: Custom tools require ownership &amp; maintenance</li>
+            <li class="fragment">Pro: Good opportunity for 20% time / side projects</li>
+            <li class="fragment">Con: Testing tools can be challenging</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Biggest Risks / Requirements</h2>
+          <ul>
+            <li class="fragment">Contributor License Agreements</li>
+            <li class="fragment">License Audit</li>
+            <li class="fragment">Security Audit</li>
+            <li class="fragment">Patent Audit</li>
+            <li class="fragment">Sensitive Info in Code</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Demo Time!</h3>
+        </section>
+        <section>
+          <h2>Other Challenges</h2>
+          <ul>
+            <li>No single owner / team</li>
+            <li>Lawyers</li>
+            <li>Execs &amp; IP</li>
+        </section>
+        <section>
+          <h2>Questions?</h2>
+          <br/>
+          <p>
+            Reach out: <a href="http://twitter.com/_JamesWard">@_JamesWard</a>
+          </p>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+        transition: 'none'
+			});
+		</script>
+	</body>
+</html>
